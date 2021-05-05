@@ -1,13 +1,15 @@
 <div class="layout-column align-items-center mt-50">
-  <section class="layout-row align-items-center justify-content-center" data-test-id="page-number-buttons">
-    <button>
-
-    </button>
+  <section
+    class="layout-row align-items-center justify-content-center"
+    data-test-id="page-number-buttons"
+  >
+    <button *ngFor="let page of arr" (click)="display(page)">{{ page }}</button>
   </section>
 
   <ul class="mt-50 styled" data-test-id="football-competitions">
-    <li class="slide-up-fade-in py-10" >
-
+    <li class="slide-up-fade-in py-10" *ngFor="let temp of data">
+      Competition {{ temp.name }} won by {{ temp.winner }} in year
+      {{ temp.year }}
     </li>
   </ul>
 </div>
