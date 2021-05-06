@@ -1,3 +1,10 @@
-
 <h8k-navbar header="Paginated Football Competitions"></h8k-navbar>
-<router-outlet></router-outlet>
+<div *ngIf="auth.user | async">
+  <h1>You logged in</h1>
+  <router-outlet></router-outlet>
+  <button (click)="signOut()">Sign Out</button>
+</div>
+<div *ngIf="!(auth.user | async)">
+  <h1>You need to sign first</h1>
+  <button (click)="signIn()">Sign In with Google</button>
+</div>
