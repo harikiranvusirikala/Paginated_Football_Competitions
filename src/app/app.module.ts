@@ -7,7 +7,7 @@ import { RouterModule } from "@angular/router";
 import { HttpClientModule } from "@angular/common/http";
 import { AngularFireModule } from "@angular/fire";
 import { AngularFireAuthModule } from "@angular/fire/auth";
-import { environment } from "src/environments/environment";
+import { environment } from "src/environments/environment.prod";
 
 @NgModule({
   declarations: [AppComponent, FootballCompetitions],
